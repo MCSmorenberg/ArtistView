@@ -6,14 +6,28 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-artist = Artist.create([
-  { name: "Whitest Boy Alive" },
-  { name: "Arctic Monkeys" }
-  ])
+Artist.destroy_all
+Song.destroy_all
 
-track = Song.create([
-  { track: "Burning" },
-  { track: "Island" },
-  { track: "Do I Wanna Know?" },
-  { track: "Arabella" }
-  ])
+  whitest_boy_alive = Artist.create({ name: "Whitest Boy Alive" })
+  arctic_monkeys = Artist.create({ name: "Arctic Monkeys" })
+
+Song.create({
+  track: "Burning",
+  artist: whitest_boy_alive
+  })
+
+Song.create({
+  track: "Island",
+  artist: whitest_boy_alive
+  })
+
+Song.create({
+  track: "Do I Wanna Know?",
+  artist: arctic_monkeys
+  })
+
+Song.create({
+  track: "Arabella",
+  artist: arctic_monkeys
+  })
