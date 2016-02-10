@@ -1,7 +1,9 @@
-<h1>Artists</h1>
+<h1>Database</h1>
 <% @artists.each do |artist| %>
-     <p><%= artist.name %></p>
+    <h2>Artist</h2>
+     <p><strong><%= artist.name %></strong></p>
      <% artist.songs.each do |song| %>
+     <h3>Song</h3>
      <p><%= song.track %></p>
      <% end %>
  <% end %>
