@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'artists#index'
+  root 'welcome#index'
   resources :artists
   resources :songs
 end

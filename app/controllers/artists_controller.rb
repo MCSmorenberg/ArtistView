@@ -8,8 +8,7 @@ class ArtistsController < ApplicationController
   end
 
   def create
-    @artist = Artist.create(params)
-    if @artist = Artist.create(reservation_params)
+    if @artist = Artist.create(artist_params)
       redirect_to @artist
     else
       render :new
@@ -26,7 +25,7 @@ class ArtistsController < ApplicationController
 
   def update
     @artist = Artist.find(params[:id])
-    if @artist.update(user_params)
+    if @artist.update(artist_params)
       redirect_to @artist
     else
       render :edit
@@ -36,7 +35,7 @@ class ArtistsController < ApplicationController
   def destroy
     @artist = Artist.find(params)
     if @artist.destroy
-      redirect_to offers_path
+      redirect_to artits_path
     else
       redirect_to @artist
     end
@@ -44,7 +43,7 @@ class ArtistsController < ApplicationController
 
   private
 
-  def reservation_params
+  def artist_params
     params.require(:artist).permit(:name)
   end
 end

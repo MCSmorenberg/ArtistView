@@ -1,9 +1,6 @@
-<h1>Database</h1>
+<h1>Choose your artist!</h1>
+
 <% @artists.each do |artist| %>
-    <h2>Artist</h2>
-     <p><strong><%= artist.name %></strong></p>
-     <% artist.songs.each do |song| %>
-     <h3>Song</h3>
-     <p><%= song.track %></p>
-     <% end %>
+     <p><strong><%= link_to artist.name, artist %></strong></p>
  <% end %>
+ <%= link_to "Home", root_path %>
