@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160210161343) do
+ActiveRecord::Schema.define(version: 20160211134608) do
 
   create_table "artists", force: :cascade do |t|
     t.string   "name"
@@ -27,5 +27,5 @@ ActiveRecord::Schema.define(version: 20160210161343) do
   end
 
   add_index "songs", ["artist_id"], name: "index_songs_on_artist_id"
-
+  
 end
