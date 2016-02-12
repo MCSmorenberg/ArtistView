@@ -1,0 +1,2 @@
+class ArtistImgController < ApplicationController
+end
