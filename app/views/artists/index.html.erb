@@ -3,4 +3,5 @@
 <% @artists.each do |artist| %>
      <p><strong><%= link_to artist.name, artist %></strong></p>
  <% end %>
+ <%= link_to "New Artist", new_artist_path %>
  <%= link_to "Home", root_path %>
