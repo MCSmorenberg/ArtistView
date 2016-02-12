@@ -2,4 +2,5 @@
 <% @artist.songs.each do |song| %>
      <p><%= link_to song.track, artists_path %></p>
  <% end %>
+ <%= link_to "Delete", artist_path(@artist), method: :delete %>
  <%= link_to "Home", root_path %>

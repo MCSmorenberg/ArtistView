@@ -5,9 +5,10 @@
     <!-- Comments here -->
     <p><%= f.label :name %></p>
     <%= f.text_field :name %>
-    <p><%= f.label :artistimg %></p>
+    <p><%= f.label :super_nice_img %></p>
     <%= f.file_field :artistimg %>
   </div>
     <%= f.submit "Save Artist" %>
-    <%= link_to "Home", root_path %> <!-- link_to -->
+    <%= link_to "Home", root_path %>
+
 <% end %>
