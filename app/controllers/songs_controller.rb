@@ -5,11 +5,11 @@ class SongsController < ApplicationController
 
   def new
     @song = Song.new
+    @artists = Artist.all
   end
 
   def create
-    @song = Song.create(params)
-    if @song = Song.create(reservation_params)
+    if @song = Song.create(song_params)
       redirect_to @song
     else
       render :new
@@ -26,7 +26,7 @@ class SongsController < ApplicationController
 
   def update
     @song = Song.find(params[:id])
-    if @song.update(user_params)
+    if @song.update(song_params)
       redirect_to @song
     else
       render :edit
@@ -34,9 +34,9 @@ class SongsController < ApplicationController
   end
 
   def destroy
-    @song = Song.find(params)
+    @song = Song.find(params[:id])
     if @song.destroy
-      redirect_to offers_path
+      redirect_to root_path
     else
       redirect_to @song
     end
@@ -44,7 +44,7 @@ class SongsController < ApplicationController
 
   private
 
-  def reservation_params
-    params.require(:song).permit(:track)
+  def song_params
+    params.require(:song).permit(:artist_id, :track)
   end
 end

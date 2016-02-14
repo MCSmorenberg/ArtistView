@@ -1,0 +1,14 @@
+<h1>Add your Song here :)</h1>
+
+<%= form_for(@song) do |f| %>
+
+   <%= f.label :artist_id %>
+
+    <%= f.select :artist_id, options_for_select(@artists.collect{ |a| [a.name, a.id] }) %>
+
+    <%= f.label :song %>
+    <%= f.text_field :track %>
+    <%= f.submit "Save Song" %>
+    <%= link_to "Home", root_path %>
+
+<% end %>

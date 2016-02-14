@@ -9,7 +9,7 @@ class ArtistsController < ApplicationController
 
   def create
     if @artist = Artist.create(artist_params)
-      redirect_to @artist
+      redirect_to new_song_path
     else
       render :new
     end
