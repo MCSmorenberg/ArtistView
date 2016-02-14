@@ -1,14 +1,11 @@
 <h1>Add your Artist here :)</h1>
-
+<p>--------------------------------------------------------</p>
 <%= form_for(@artist) do |f| %>
-  <div>
-    <!-- Comments here -->
-    <p><%= f.label :name %></p>
-    <%= f.text_field :name %>
-    <p><%= f.label :super_nice_img %></p>
-    <%= f.file_field :artistimg %>
-  </div>
-    <%= f.submit "Save Artist" %>
-    <%= link_to "Home", root_path %>
-
+  <p><%= f.label :name %></p>
+  <%= f.text_field :name %>
+  <p><%= f.label :Add_a_super_nice_img! %></p>
+  <%= f.file_field :artistimg %>
+  <p><%= f.submit "Save Artist" %></p>
+  <p>--------------------------------------------------------</p>
+  <%= link_to "Home", root_path %>
 <% end %>

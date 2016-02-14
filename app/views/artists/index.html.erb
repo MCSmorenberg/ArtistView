@@ -1,8 +1,8 @@
 <h1>Choose your artist!</h1>
-
+<p>--------------------------------------------------------</p>
 <% @artists.each do |artist| %>
      <p><strong><%= link_to artist.name, artist %></strong></p>
      <%= image_tag artist.artistimg %>
  <% end %>
- <%= link_to "New Artist", new_artist_path %>
- <%= link_to "Home", root_path %>
+ <p>--------------------------------------------------------</p>
+ <p><%= link_to "New Artist", new_artist_path %> | <%= link_to "Home", root_path %></p>

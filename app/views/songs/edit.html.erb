@@ -1,13 +1,9 @@
 <h1>Edit Song</h1>
-
+<p>--------------------------------------------------------</p>
 <%= form_for(@song) do |f| %>
-  <div>
-    <p><%= f.label :song %></p>
-    <%= f.text_field :track %>
-  </div>
-
-  <div>
-    <%= f.submit "Save Song" %>
-    <%= link_to "Cancel", @song %>
-  </div>
+  <p><%= f.label :song %></p>
+  <%= f.text_field :track %>
+  <p><%= f.submit "Save Song" %></p>
 <% end %>
+<p>--------------------------------------------------------</p>
+<%= link_to "Cancel", @song %>
