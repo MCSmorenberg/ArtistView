@@ -1,0 +1,13 @@
+<h1>Edit Artist</h1>
+
+<%= form_for(@artist) do |f| %>
+  <div>
+    <p><%= f.label :name %></p>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.submit "Save Artist" %>
+    <%= link_to "Cancel", @artist %>
+  </div>
+<% end %>
