@@ -2,6 +2,8 @@
 
 one:
   name: MyString
+  artistimg: MyString
 
 two:
   name: MyString
+  artistimg: MyString
